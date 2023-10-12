@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class DatabaseController {
 
-    public String[] getAllNames(){
+    public static String[] getAllNames(){
 
         int i = 0;
 
@@ -44,7 +44,7 @@ public class DatabaseController {
         
     }
 
-    public void saveAcc(Account acc){
+    public static void saveAcc(Account acc){
 
         int i = 0;
 
@@ -74,11 +74,9 @@ public class DatabaseController {
             e2.printStackTrace();
         }
 
-        //TO DO ADD FIELDS TO ACCOUNT
-        /*
-        database[i-2] = acc.name;
-        database[i-1] = acc.wallet;
-         */
+        String [] newAcc = Account.getAccInfo(acc);
+        database[i] = newAcc[0];
+        database[i+1] = newAcc[1];
 
         try{
             BufferedWriter writer = new BufferedWriter(new FileWriter("database.txt"));
