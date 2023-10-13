@@ -12,8 +12,7 @@ public class DatabaseController {
 
         try{
             BufferedReader reader = new BufferedReader(new FileReader("database.txt"));
-            String line;
-            while((line = reader.readLine()) != null){
+            while((reader.readLine()) != null){
                 i++;
             }
             reader.close();
@@ -50,8 +49,7 @@ public class DatabaseController {
 
         try{
             BufferedReader reader = new BufferedReader(new FileReader("database.txt"));
-            String line;
-            while((line = reader.readLine()) != null){
+            while((reader.readLine()) != null){
                 i++;
             }
             reader.close();
@@ -88,4 +86,53 @@ public class DatabaseController {
             e.printStackTrace();
         }
     }
+
+    public static void updateBalance(Account acc){
+
+        int i = 0;
+
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader("database.txt"));
+            while((reader.readLine()) != null){
+                i++;
+            }
+            reader.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        String[] database = new String[i];
+        i = 0;
+
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader("database.txt"));
+            String line;
+            while((line = reader.readLine()) != null){
+                database[i] = line;
+                i++;
+            }
+            reader.close();;
+        }catch (IOException e2){
+            e2.printStackTrace();
+        }
+
+        String [] newAcc = Account.getAccInfo(acc);
+        
+        for(int j = 0; j < database.length; j=j+2){
+            if(database[j].equals(newAcc[0])){
+                database[j+1] = newAcc[1];
+            }
+        }
+
+        try{
+            BufferedWriter writer = new BufferedWriter(new FileWriter("database.txt"));
+            for(int j = 0; j < database.length; j++){
+                writer.write(database[j]+"\n");
+            }
+            writer.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+
 }
