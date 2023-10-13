@@ -13,4 +13,19 @@ public class Account {
         String[] temp = {acc.name, Integer.toString(acc.wallet)};
         return temp;
     }
+    
+    public boolean withdraw(int amount){
+        if (wallet - amount>=0){
+            wallet = wallet - amount;
+            return true;
+        } else {
+            return false;
+        }
+    }
+    public void deposti(int amount){
+        wallet = wallet + amount;
+        return ;
+    }
+
+
 }
