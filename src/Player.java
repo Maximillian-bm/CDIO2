@@ -34,14 +34,15 @@ public class Player {
         } else if (roll == 12) {
             points = points+650; 
         }
-        return int[x, y]; 
+        int[] r = {x,y};
+        return r; 
     }
 
     public void addPoints(int p) {
         points = points+p;
     }
 
-    public empty() {
+    public int empty() {
         int temporary; 
         temporary = points; 
         points = 0; 
