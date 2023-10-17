@@ -15,6 +15,14 @@ public class Player {
         acc = DatabaseController.pullAccFromDB(name);
     }
 
+    public Account getAcc(){
+        return acc;
+    }
+
+    public void resetAcc(){
+        acc = null;
+    }
+
     public String getName(){
         String[] temp = Account.getAccInfo(acc);
         return temp[0];
