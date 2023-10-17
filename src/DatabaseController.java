@@ -135,4 +135,43 @@ public class DatabaseController {
         }
     }
 
+    public static Account pullAccFromDB(int x){
+
+        int i = 0;
+
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader("database.txt"));
+            while((reader.readLine()) != null){
+                i++;
+            }
+            reader.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        if(i < x*2){
+            return null;
+        }else{
+
+            String[] database = new String[i];
+            i = 0;
+
+            try{
+                BufferedReader reader = new BufferedReader(new FileReader("database.txt"));
+                String line;
+                while((line = reader.readLine()) != null){
+                    database[i] = line;
+                    i++;
+                }
+                reader.close();;
+            }catch (IOException e2){
+                e2.printStackTrace();
+            }
+
+            Account acc = new Account(database[(x-1)*2], Integer.parseInt(database[((x-1)*2)+1]));
+
+            return acc;
+        }
+    }
+
 }
