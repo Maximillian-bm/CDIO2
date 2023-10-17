@@ -9,6 +9,11 @@ public class Account {
         this.wallet = startValue;
     }
 
+    public Account(String name, int wallet){
+        this.name = name;
+        this.wallet = wallet;
+    }
+
     public static String[] getAccInfo(Account acc){
         String[] temp = {acc.name, Integer.toString(acc.wallet)};
         return temp;
