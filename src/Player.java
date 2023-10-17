@@ -5,7 +5,7 @@ public class Player {
 
     private int points; 
 
-    Account acc;
+    private Account acc;
 
     public void newAcc(String name){
         acc = new Account(name);
@@ -13,6 +13,11 @@ public class Player {
 
     public void pullAcc(String name){
         acc = DatabaseController.pullAccFromDB(name);
+    }
+
+    public String getName(){
+        String[] temp = Account.getAccInfo(acc);
+        return temp[0];
     }
 
     public int[] rollDice() {
