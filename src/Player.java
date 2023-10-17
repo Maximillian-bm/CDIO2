@@ -5,6 +5,16 @@ public class Player {
 
     private int points; 
 
+    Account acc;
+
+    public void newAcc(String name){
+        acc = new Account(name);
+    }
+
+    public void pullAcc(String name){
+        acc = DatabaseController.pullAccFromDB(name);
+    }
+
     public int[] rollDice() {
         int x = dice1.rollDie();
         int y = dice2.rollDie(); 

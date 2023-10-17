@@ -135,7 +135,7 @@ public class DatabaseController {
         }
     }
 
-    public static Account pullAccFromDB(int x){
+    public static Account pullAccFromDB(String name){
 
         int i = 0;
 
@@ -149,29 +149,33 @@ public class DatabaseController {
             e.printStackTrace();
         }
 
-        if(i < x*2){
-            return null;
-        }else{
+        
 
-            String[] database = new String[i];
-            i = 0;
+        String[] database = new String[i];
+        i = 0;
 
-            try{
-                BufferedReader reader = new BufferedReader(new FileReader("database.txt"));
-                String line;
-                while((line = reader.readLine()) != null){
-                    database[i] = line;
-                    i++;
-                }
-                reader.close();;
-            }catch (IOException e2){
-                e2.printStackTrace();
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader("database.txt"));
+            String line;
+            while((line = reader.readLine()) != null){
+                database[i] = line;
+                i++;
             }
-
-            Account acc = new Account(database[(x-1)*2], Integer.parseInt(database[((x-1)*2)+1]));
-
-            return acc;
+            reader.close();;
+        }catch (IOException e2){
+            e2.printStackTrace();
         }
+
+        Account acc = null;
+
+        for(int j = 0; j < i; j++){
+            if(database[j].equals(name)){
+                acc = new Account(database[j], Integer.parseInt(database[j+1]));
+            }
+        }
+
+        return acc;
+        
     }
 
 }
