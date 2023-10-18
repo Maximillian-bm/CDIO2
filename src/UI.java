@@ -10,7 +10,18 @@ public class UI {
                             "name is already in use by player 2 one you stupid bitch write another name",
                             "name is already in use by player 1 one you stupid bitch write another name",
                             "both players now dont have an acc selected so player 1 start by selecting or creating an acc by writing a name",
-                            "game rules and controlls"};
+                            "game rules and controlls",
+                            " you have rolled a 2, you get 250 gold and now have a total of ",
+                            " you have rolled a 3, you lose 100 gold and now have a total of ",
+                            " you have rolled a 4, you get 100 gold and now have a total of ",
+                            " you have rolled a 5, you lose 20 gold and now have a total of ",
+                            " you have rolled a 6, you get 180 gold and now have a total of ",
+                            " you have rolled a 7, you get no gold and now have a total of ",
+                            " you have rolled a 8, you lose 70 you gold and now have a total of ",
+                            " you have rolled a 9, you get 60 you gold and now have a total of ",
+                            " you have rolled a 10, you lose 80 you gold and now have a total of ",
+                            " you have rolled a 11, you lose 50 you gold and now have a total of ",
+                            " you have rolled a 12, you get 650 you gold and now have a total of "};
     String[] danishText = {"Hej"};
     String tiles = "-------------------------------------------------------------\n|  0 |+250|-100|+100| -20|+180|  0 | -70| +60|-80?| -50|+650|\n-------------------------------------------------------------";
 
@@ -129,6 +140,7 @@ public class UI {
 
         int sum = status[0] + status[1];
 
+        System.out.println();
         System.out.println(name+text[sum+7]+status[2]);
 
     }
