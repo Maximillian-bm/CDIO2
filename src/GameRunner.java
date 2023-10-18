@@ -10,6 +10,8 @@ public class GameRunner {
         boolean p1ready = false;
         boolean p2ready = false;
         boolean firstRun = true;
+        boolean firstGameRun = true;
+        boolean p1sTurn = true;
         UI ui = new UI(0);
 
         //Importing scanner
@@ -41,8 +43,51 @@ public class GameRunner {
                 }
             }
 
-            if(start && !firstRun){
+            if(start){
                 //if both player have selected an acc and they have written start this code will run
+
+                if(firstGameRun){
+
+                    if(player1.addPoints(1000)&&player2.addPoints(1000)){
+                        ui.print(8);
+                        firstGameRun = false;
+                    }else{
+                        ui.print(20);
+                        ui.print(7);
+                        player1.resetAcc();
+                        player2.resetAcc();
+                        start = false;
+                        p1ready = false;
+                        p2ready = false;
+                        start = false;
+                    }
+                    
+                }
+
+                if(input.equals("roll")){
+
+                    if(p1sTurn){
+
+                        int[] roll = player1.rollDice();
+
+                        ui.printRoll(player1.getName(), roll);
+
+                        if(roll[0] + roll[1] != 10){
+                            p1sTurn = false;
+                        }
+
+                    }else{
+
+                        int[] roll = player2.rollDice();
+
+                        ui.printRoll(player2.getName(), roll);
+
+                        if(roll[0] + roll[1] != 10){
+                            p1sTurn = true;
+                        }
+
+                    }
+                }
 
             }else if(!firstRun){
                 //if not both players have selected an acc yet this code wil run

@@ -22,7 +22,8 @@ public class UI {
                             " you have rolled a 10, you lose 80 gold BUT you get an extra turn and you now have a total of ",
                             " you have rolled an 11, you lose 50 gold and now have a total of ",
                             " you have rolled a 12, you get 650 gold and now have a total of ",
-                            " you have over 3000 gold and win"};
+                            " you have over 3000 gold and win",
+                            "you dont have anoth gold broke bitch"};
     String[] danishText = {"Dette er et 2-spiller spil, I skal hver især oprette en konto ved at skrive det navn, du ønsker din konto skal have, eller skrive et af følgende navne for at vælge en eksisterende konto.",
                             "Der er ingen konti gemt i databasen.",
                             "Du bruger din konto til at gemme, hvor mange guldmønter du har. Du vinder guld ved at spille spillet, og det koster 1000 guld at spille det, men fortvivl ikke, for alle nye konti starter med 1000 guld. Du kan også skifte konto ved at skrive 'skift'. Når begge spillere har valgt en konto, kan I skrive 'start' for at begynde spillet. Spiller et, det er din tur. Skriv et navn.",
@@ -43,7 +44,8 @@ public class UI {
                             " Du har slået en 10'er. Du mister 80 guld, MEN får en ekstra tur, og har nu i alt ",
                             " Du har slået en 11'er. Du mister 50 guld og har nu i alt ",
                             " Du har slået en 12'er. Du får 650 guld og har nu i alt ",
-                            " Du har over 3000 guld og vinder."};
+                            " Du har over 3000 guld og vinder.",
+                            "du har ik nok guld din fattigrøv"};
     String tiles = "-------------------------------------------------------------\n|  0 |+250|-100|+100| -20|+180|  0 | -70| +60|-80?| -50|+650|\n-------------------------------------------------------------";
 
     public UI(int x) {

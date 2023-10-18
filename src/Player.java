@@ -61,8 +61,13 @@ public class Player {
         return r; 
     }
 
-    public void addPoints(int p) {
-        points = points+p;
+    public boolean addPoints(int p) {
+        if(acc.withdraw(p)){
+            points = points+p;
+            return true;
+        }else{
+            return false;
+        }
     }
 
     public int empty() {
