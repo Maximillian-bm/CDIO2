@@ -178,4 +178,47 @@ public class DatabaseController {
         
     }
 
+    public static boolean doesExist(Account acc){
+
+        int i = 0;
+
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader("database.txt"));
+            while((reader.readLine()) != null){
+                i++;
+            }
+            reader.close();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        
+
+        String[] database = new String[i];
+        i = 0;
+
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader("database.txt"));
+            String line;
+            while((line = reader.readLine()) != null){
+                database[i] = line;
+                i++;
+            }
+            reader.close();;
+        }catch (IOException e2){
+            e2.printStackTrace();
+        }
+
+        String name = Account.getAccInfo(acc)[0];
+        boolean r = false;
+
+        for(int j = 0; j < i; j++){
+            if(database[j].equals(name)){
+                r = true;
+            }
+        }
+
+        return r;
+    }
+
 }
