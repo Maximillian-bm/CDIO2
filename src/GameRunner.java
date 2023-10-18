@@ -10,7 +10,7 @@ public class GameRunner {
         boolean p1ready = false;
         boolean p2ready = false;
         boolean firstRun = true;
-        UI ui;
+        UI ui = new UI(0);
 
         //Importing scanner
         var scanner = new java.util.Scanner(System.in);
@@ -32,8 +32,7 @@ public class GameRunner {
                     ui = new UI(0);
                 }
 
-                //Replace with UI method
-                System.out.println("control instruktions for acc selection");
+                ui.print(0);
             }
 
             if(input.equals("start") && !firstRun){
@@ -41,7 +40,7 @@ public class GameRunner {
                     start = true;
                 }
             }
-            gameLoop:
+
             if(start && !firstRun){
                 //if both player have selected an acc and they have written start this code will run
 
@@ -52,8 +51,7 @@ public class GameRunner {
                 if(input.equals("switch")){
                     //TOO DO if someone wants to switch acc
 
-                    //replace with ui method
-                    System.out.println("both players now dont have an acc selected so player 1 select an acc");
+                    ui.print(7);
 
                     player1.resetAcc();
                     player2.resetAcc();
@@ -69,8 +67,7 @@ public class GameRunner {
                     if(!p1ready){
 
                         if(player2.getAcc() != null && input.equals(player2.getName())){
-                            //replace with ui method
-                            System.out.println("name is already in use by player 2 one you stupid bitch write another name");
+                            ui.print(5);
                             break accSelection;
                         }
 
@@ -85,14 +82,12 @@ public class GameRunner {
                             player1.newAcc(input);
                             p1ready = true;
                         }
-                        //replace with ui method
-                        System.out.println("player 1 has selected acc now its player 2's turn bla bla bla");
+                        ui.print(3);
 
                     }else if(!p2ready){
                         
                         if(player1.getAcc() != null && input.equals(player1.getName())){
-                            //replace with ui method
-                            System.out.println("name is already in use by player 1 one you stupid bitch write another name");
+                           ui.print(6);
                             break accSelection;
                         }
 
@@ -107,8 +102,7 @@ public class GameRunner {
                             player2.newAcc(input);
                             p2ready = true;
                         }
-                        //replace with ui method
-                        System.out.println("player 2 has selected acc you can now start the game bla bla bla");
+                        ui.print(4);
 
                     }
 

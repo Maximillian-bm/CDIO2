@@ -2,7 +2,15 @@ public class UI {
 
     String[][] diceIndex = new String[6][7];
     String[] text;
-    String[] englishText = {"Hello"};
+    String[] englishText = {"This is a 2 player game, you will each have to create an account by writing the name you want your account to have or write one of the following names to sellect an existing account",
+                            "There are no accounts saved in the database",
+                            "You use you account to save how many gold pieces you have, you win gold by playing the game and it cost 1000 gold to play it but dont worry becous all new accounts start with 1000 gold. You can also switch account by writing 'switch'. When both players have selected an account you can write 'start' to start the game. Player one you are up first, write a name",
+                            "player 1 has selected acc now its player 2's turn",
+                            "player 2 has selected acc",
+                            "name is already in use by player 2 one you stupid bitch write another name",
+                            "name is already in use by player 1 one you stupid bitch write another name",
+                            "both players now dont have an acc selected so player 1 start by selecting or creating an acc by writing a name",
+                            "game rules and controlls"};
     String[] danishText = {"Hej"};
     String tiles = "-------------------------------------------------------------\n|  0 |+250|-100|+100| -20|+180|  0 | -70| +60|-80?| -50|+650|\n-------------------------------------------------------------";
 
@@ -87,6 +95,42 @@ public class UI {
             }
             System.out.print("■");
         }
+    }
+
+    public void print(int x){
+
+        System.out.println(text[x]);
+
+        if(x == 0){
+
+            String[] names = DatabaseController.getAllNames();
+
+            if(names.length == 0){
+
+                System.out.println(text[1]);
+
+            }else{
+
+                for(int i = 0; i < names.length; i++){
+
+                    System.out.println(names[i]);
+
+                }
+            }
+
+            System.out.println(text[2]);
+        }
+
+    }
+
+    public void printRoll(String name, int[] status){
+
+        printDiceRoll(status);
+
+        int sum = status[0] + status[1];
+
+        System.out.println(name+text[sum+7]+status[2]);
+
     }
     
 }
