@@ -57,7 +57,7 @@ public class Player {
         } else if (roll == 12) {
             points = points+650; 
         }
-        int[] r = {x,y};
+        int[] r = {x,y,points};
         return r; 
     }
 
