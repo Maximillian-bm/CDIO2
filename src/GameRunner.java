@@ -56,7 +56,6 @@ public class GameRunner {
                         ui.print(7);
                         player1.resetAcc();
                         player2.resetAcc();
-                        start = false;
                         p1ready = false;
                         p2ready = false;
                         start = false;
@@ -89,12 +88,25 @@ public class GameRunner {
                     }
                 }
 
+                if(player1.hasWon()){
+                    //TO DOO add text in ui
+                    System.out.println("player 1 won");
+                    endGame(player1, player2);
+                    start = false;
+
+                }else if(player2.hasWon()){
+                    //TO DOO add text in ui
+                    System.out.println("player 2 won");
+                    endGame(player1, player2);
+                    start = false;
+                    
+                }
+
             }else if(!firstRun){
                 //if not both players have selected an acc yet this code wil run
 
                 accSelection:
                 if(input.equals("switch")){
-                    //TOO DO if someone wants to switch acc
 
                     ui.print(7);
 
@@ -162,5 +174,20 @@ public class GameRunner {
 
         scanner.close();
  
+    }
+
+    static void endGame(Player p1, Player p2){
+        p1.empty();
+        p2.empty();
+        if(DatabaseController.doesExist(p1.getAcc())){
+            DatabaseController.updateBalance(p1.getAcc());;
+        }else{
+            DatabaseController.saveAcc(p1.getAcc());
+        }
+        if(DatabaseController.doesExist(p2.getAcc())){
+            DatabaseController.updateBalance(p1.getAcc());;
+        }else{
+            DatabaseController.saveAcc(p2.getAcc());
+        }
     }
 }
