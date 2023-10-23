@@ -37,7 +37,7 @@ public class GameRunner {
                 ui.print(0);
             }
 
-            if(input.equals("start") && !firstRun){
+            if(ui.is(input, 0)){
                 if(p1ready && p2ready){
                     start = true;
                 }
@@ -63,7 +63,7 @@ public class GameRunner {
                     
                 }
 
-                if(input.equals("roll")){
+                if(ui.is(input, 1)){
 
                     if(p1sTurn){
 
@@ -106,7 +106,7 @@ public class GameRunner {
                 //if not both players have selected an acc yet this code wil run
 
                 accSelection:
-                if(input.equals("switch")){
+                if(ui.is(input, 2)){
 
                     ui.print(7);
 
