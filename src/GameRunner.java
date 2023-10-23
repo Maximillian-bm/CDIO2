@@ -185,12 +185,12 @@ public class GameRunner {
         p1.empty();
         p2.empty();
         if(DatabaseController.doesExist(p1.getAcc())){
-            DatabaseController.updateBalance(p1.getAcc());;
+            DatabaseController.updateBalance(p1.getAcc());
         }else{
             DatabaseController.saveAcc(p1.getAcc());
         }
         if(DatabaseController.doesExist(p2.getAcc())){
-            DatabaseController.updateBalance(p1.getAcc());;
+            DatabaseController.updateBalance(p2.getAcc());
         }else{
             DatabaseController.saveAcc(p2.getAcc());
         }
