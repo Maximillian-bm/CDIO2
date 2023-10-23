@@ -1,10 +1,10 @@
 public class UI {
 
-    String[][] diceIndex = new String[6][7];
-    String[] text;
-    String[] englishText = {"This is a 2 player game, you will each have to create an account by writing the name you want your account to have or write one of the following names to sellect an existing account",
+    private String[][] diceIndex = new String[6][7];
+    private String[] text;
+    private final String[] englishText = {"This is a 2 player game, you will each have to create an account by writing the name you want your account to have or write one of the following names to sellect an existing account",
                             "There are no accounts saved in the database",
-                            "You use you account to save how many gold pieces you have, you win gold by playing the game and it cost 1000 gold to play it but dont worry becous all new accounts start with 1000 gold. You can also switch account by writing 'switch'. When both players have selected an account you can write 'start' to start the game. Player one you are up first, write a name",
+                            "You use you account to save how many gold pieces you have, you win gold by playing the game and it cost 1000 gold to play it but dont worry becous all new accounts start with 1000 gold. You can also switch account by writing 'switch'. You can write 'exit' to exit the program. When both players have selected an account you can write 'start' to start the game. Player one you are up first, write a name",
                             "player 1 has selected acc now its player 2's turn",
                             "player 2 has selected acc",
                             "name is already in use by player 2 one you stupid bitch write another name",
@@ -24,9 +24,9 @@ public class UI {
                             " you have rolled a 12, you get 650 gold and now have a total of ",
                             " you have over 3000 gold and win",
                             "you dont have anoth gold broke bitch"};
-    String[] danishText = {"Dette er et 2-spiller spil, I skal hver især oprette en konto ved at skrive det navn, du ønsker din konto skal have, eller skrive et af følgende navne for at vælge en eksisterende konto.",
+    private final String[] danishText = {"Dette er et 2-spiller spil, I skal hver især oprette en konto ved at skrive det navn, du ønsker din konto skal have, eller skrive et af følgende navne for at vælge en eksisterende konto.",
                             "Der er ingen konti gemt i databasen.",
-                            "Du bruger din konto til at gemme, hvor mange guldmønter du har. Du vinder guld ved at spille spillet, og det koster 1000 guld at spille det, men fortvivl ikke, for alle nye konti starter med 1000 guld. Du kan også skifte konto ved at skrive 'skift'. Når begge spillere har valgt en konto, kan I skrive 'start' for at begynde spillet. Spiller et, det er din tur. Skriv et navn.",
+                            "Du bruger din konto til at gemme, hvor mange guldmønter du har. Du vinder guld ved at spille spillet, og det koster 1000 guld at spille det, men fortvivl ikke, for alle nye konti starter med 1000 guld. Du kan også skifte konto ved at skrive 'skift'. Skriv 'stop' for at stoppe spillet. Når begge spillere har valgt en konto, kan I skrive 'start' for at begynde spillet. Spiller et, det er din tur. Skriv et navn.",
                             "Spiller 1 har valgt en konto, nu er det spiller 2's tur.",
                             "Spiller 2 har valgt en konto.",
                             "Navnet er allerede i brug af spiller 2. Skriv et andet navn, din tåbelige person.",
@@ -46,7 +46,11 @@ public class UI {
                             " Du har slået en 12'er. Du får 650 guld og har nu i alt ",
                             " Du har over 3000 guld og vinder.",
                             "du har ik nok guld din fattigrøv"};
-    String tiles = "-------------------------------------------------------------\n|  0 |+250|-100|+100| -20|+180|  0 | -70| +60|-80?| -50|+650|\n-------------------------------------------------------------";
+    private final String tiles = "-------------------------------------------------------------\n|  0 |+250|-100|+100| -20|+180|  0 | -70| +60|-80?| -50|+650|\n-------------------------------------------------------------";
+
+    private String[] input;
+    private final String[] danishInput = {"start", "kast", "skift", "stop"};
+    private final String[] englishInput = {"start", "roll", "switch", "exit"};
 
     public UI(int x) {
         diceIndex[0][0] = "--------------";
@@ -99,8 +103,10 @@ public class UI {
 
         if(x == 1){
             text = danishText;
+            input = danishInput;
         }else{
             text = englishText;
+            input = englishInput;
         }
     }
 
@@ -155,6 +161,10 @@ public class UI {
             System.out.println(text[2]);
         }
 
+    }
+
+    public boolean is(String input, int i){
+        return this.input[i] == input;
     }
 
     public void printRoll(String name, int[] status){
