@@ -70,12 +70,9 @@ public class Player {
         }
     }
 
-    public int empty() {
-        int temporary; 
-        temporary = points; 
+    public void empty() {
+        acc.deposti(points);
         points = 0; 
-
-        return temporary; 
     }
 
     public boolean hasWon(){
