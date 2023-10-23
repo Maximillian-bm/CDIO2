@@ -11,19 +11,19 @@ public class UI {
                             "name is already in use by player 1 one you stupid bitch write another name",
                             "both players now dont have an acc selected so player 1 start by selecting or creating an acc by writing a name",
                             "game rules and controlls",
-                            " you have rolled a 2, you get 250 gold and now have a total of ",
-                            " you have rolled a 3, you lose 100 gold and now have a total of ",
-                            " you have rolled a 4, you get 100 gold and now have a total of ",
-                            " you have rolled a 5, you lose 20 gold and now have a total of ",
-                            " you have rolled a 6, you get 180 gold and now have a total of ",
-                            " you have rolled a 7, you get no gold and now have a total of ",
-                            " you have rolled an 8, you lose 70 gold and now have a total of ",
-                            " you have rolled a 9, you get 60 gold and now have a total of ",
-                            " you have rolled a 10, you lose 80 gold BUT you get an extra turn and you now have a total of ",
-                            " you have rolled an 11, you lose 50 gold and now have a total of ",
-                            " you have rolled a 12, you get 650 gold and now have a total of ",
-                            " you have over 3000 gold and win",
-                            "you dont have anoth gold broke bitch"};
+                            " you have rolled a 2, You've discovered a majestic Tower! 250 gold coins magically appear in your pockets, giving you a grand total of...) ",
+                            " you have rolled a 3, Oh no! You stumbled into a Crater! 100 gold coins vanish into thin air, leaving you with a total of...",
+                            " you have rolled a 4, You've arrived at the regal Palace Gates! 100 gold coins graciously bestowed upon you, boosting your total to...",
+                            " you have rolled a 5, Brr, it's the Cold Desert! 20 gold coins drift away like grains of sand, leaving you with...",
+                            " you have rolled a 6, Welcome to the bustling Walled City! Your new friends in the city are quite hospitable, and they've chipped in, gifting you with 180 gold coins to raise your total to...",
+                            " you have rolled a 7, You've reached the serene Monastery, you find inner peace and remain at...",
+                            " you have rolled an 8, You stare into the Black Cave! 70 gold coins disappear into the darkness, leaving you with...",
+                            " you have rolled a 9, You've discovered a cozy Huts in the Mountain!y You find 60 gold coins in the hut, giving you...",
+                            " you have rolled a 10, Uh-oh, you've hit the Werewall, and it's a howler! You lost 80 gold coins, but you get an extra turn, and your new total is...",
+                            " you have rolled an 11, You narrowly avoid the Pit, but 50 gold coins fall out of your pocket into the abyss, leaving you with... ",
+                            " you have rolled a 12, You struck gold at the Goldmine! +650 gold coins, and your total now stands at...",
+                            " Congratulations, you've emerged as the ultimate gold hunter, amassing a treasure trove of 3,000 gold coins! You stand triumphant, your fortune glittering like a dragon's hoard, and the title of champion is yours to claim!",
+                            " You dont have enough money to play"};
     private final String[] danishText = {"Dette er et 2-spiller spil, I skal hver især oprette en konto ved at skrive det navn, du ønsker din konto skal have, eller skrive et af følgende navne for at vælge en eksisterende konto.",
                             "Der er ingen konti gemt i databasen.",
                             "Du bruger din konto til at gemme, hvor mange guldmønter du har. Du vinder guld ved at spille spillet, og det koster 1000 guld at spille det, men fortvivl ikke, for alle nye konti starter med 1000 guld. Du kan også skifte konto ved at skrive 'skift'. Skriv 'stop' for at stoppe spillet. Når begge spillere har valgt en konto, kan I skrive 'start' for at begynde spillet. Spiller et, det er din tur. Skriv et navn.",
@@ -33,19 +33,19 @@ public class UI {
                             "Navnet er allerede i brug af spiller 1. Skriv et andet navn, din tåbelige person.",
                             "Begge spillere har nu ikke valgt en konto, så spiller 1 begynder ved at vælge eller oprette en konto ved at skrive et navn.",
                             "Spilleregler og kontrol.",
-                            " Du har slået en 2'er. Du får 250 guld og har nu i alt ",
-                            " Du har slået en 3'er. Du mister 100 guld og har nu i alt ",
-                            " Du har slået en 4'er. Du får 100 guld og har nu i alt ",
-                            " Du har slået en 5'er. Du mister 20 guld og har nu i alt ",
-                            " Du har slået en 6'er. Du får 180 guld og har nu i alt ",
-                            " Du har slået en 7'er. Du får ingen guld og har nu i alt ",
-                            " Du har slået en 8'er. Du mister 70 guld og har nu i alt ",
-                            " Du har slået en 9'er. Du får 60 guld og har nu i alt ",
-                            " Du har slået en 10'er. Du mister 80 guld, MEN får en ekstra tur, og har nu i alt ",
-                            " Du har slået en 11'er. Du mister 50 guld og har nu i alt ",
-                            " Du har slået en 12'er. Du får 650 guld og har nu i alt ",
-                            " Du har over 3000 guld og vinder.",
-                            "du har ik nok guld din fattigrøv"};
+                            " Du har slået en 2, Du har opdaget et majestætisk tårn! 250 guld mønter dukker magisk op i dine lommer og giver dig en samlet sum af...",
+                            " Du har slået en 3, Åh nej! Du er faldet ned i en krater! 100 guld mønter forsvinder som dug for solen og efterlader dig med en samlet sum af...",
+                            " Du har slået en 4. Du er ankommet til porten af det royale palads! De er gavmilde i dag og giver dig 100 guld mønter, hvilket bringer din samlede sum til...",
+                            " Du har slået en 5. Brr, det er den Kolde Ørken! Dine guld mønter besluttede sig at tage på deres eget eventyr, og 20 af dem svævede bare væk som sandkorn. Nu har du...",
+                            " Du har slået en 6. Velkommen til den travle by med mure! Dine nye venner i byen er ganske gæstfri, og de har lagt 180 guld mønter i puljen for at øge din samlede sum til...",
+                            " Du har slået en 7. Du er nået det fredelige kloster. Du finder indre ro, men dit guld forbliver i en zen-lignende tilstand af...",
+                            " Du har slået en 8. Du stirrer ned i dybet af den sorte hule! 70 guld mønter er blevet slugt af mørket, og din samlede sum er nu...",
+                            " Du har slået en 9. Du er stødt på hyggelige hytter i bjergene! I en af hytterne opdager du 60 guld mønter, hvilket bringer din samlede sum til...",
+                            " Du har slået en 10. Åh nej, du har ramt warulve-muren, og den hyler i gennem hele natten! Du mister 80 guld mønter, men du får en ekstra tur, så din nye samlede sum er...",
+                            " Du har slået en 11. Du undgik heldigvis hullet, men 50 guld mønter faldt ned i afgrunden og efterlod dig med...",
+                            " Du har slået en 12. Du har ramt guldåren i guldminen! +650 guld mønter er regnet ned over dig, og din samlede sum står nu på...",
+                            " Du er nået enden af din rejse, og med en imponerende mængde af 3.000 guld mønter i lommen, er du den uovertrufne guldjæger. Guld strømmer mod dig, og du bader i din nyfundne rigdom.",
+                            " Du har ikke nogle penge til at spille"};
     private final String tiles = "-------------------------------------------------------------\n|  0 |+250|-100|+100| -20|+180|  0 | -70| +60|-80?| -50|+650|\n-------------------------------------------------------------";
 
     private String[] input;
@@ -164,7 +164,7 @@ public class UI {
     }
 
     public boolean is(String input, int i){
-        return this.input[i].equals(input);
+        return this.input[i] == input;
     }
 
     public void printRoll(String name, int[] status){
