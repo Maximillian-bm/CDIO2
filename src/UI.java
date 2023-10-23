@@ -164,7 +164,7 @@ public class UI {
     }
 
     public boolean is(String input, int i){
-        return this.input[i] == input;
+        return this.input[i].equals(input);
     }
 
     public void printRoll(String name, int[] status){
