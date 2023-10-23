@@ -21,6 +21,7 @@ public class GameRunner {
 
         System.out.println("Welcome to the DIE game\nFor Danish write 'danish'\nFor English write 'english'");
 
+        program:
         while(scanner.hasNextLine()) {
 
             input = scanner.nextLine();
@@ -168,6 +169,10 @@ public class GameRunner {
             }
             if(firstRun){
                 firstRun = false;
+            }
+
+            if(ui.is(input, 3)){
+                break program;
             }
             
         }
