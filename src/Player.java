@@ -77,4 +77,13 @@ public class Player {
 
         return temporary; 
     }
+
+    public boolean hasWon(){
+        
+        if(3000 <= points){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
