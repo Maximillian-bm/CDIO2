@@ -32,7 +32,7 @@ public class UI {
                             "Navnet er allerede i brug af spiller 2. Skriv et andet navn, din tåbelige person.",
                             "Navnet er allerede i brug af spiller 1. Skriv et andet navn, din tåbelige person.",
                             "Begge spillere har nu ikke valgt en konto, så spiller 1 begynder ved at vælge eller oprette en konto ved at skrive et navn.",
-                            "Spilleregler og kontrol.",
+                            "Sådan ruller du terningerne: Du skal skrive 'kast' i konsollen for at rulle terningerne. Spillet kræver 2 terninger for at spille. De to spillere skiftes til at rulle, medmindre de ruller en 10, hvorefter de får et ekstra rulle. Summen af hver rulle har en værdi, hvlike afgør, hvor meget guld der tilføjes eller trækkes fra din saldo. Liste over terningværdier (2. Tårn +250, 3. Krater -100, 4. Palas port +100, 5. Kold ørken -20, 6. Muret by +180, 7. Kloster 0, 8. Sorte hule -70, 9. Hytter i bjergene +60, 10. Varulvevæg -80, 11. Hullet -50, 12. Guldmine +650)..",
                             " Du har slået en 2, Du har opdaget et majestætisk tårn! 250 guld mønter dukker magisk op i dine lommer og giver dig en samlet sum af...",
                             " Du har slået en 3, Åh nej! Du er faldet ned i en krater! 100 guld mønter forsvinder som dug for solen og efterlader dig med en samlet sum af...",
                             " Du har slået en 4. Du er ankommet til porten af det royale palads! De er gavmilde i dag og giver dig 100 guld mønter, hvilket bringer din samlede sum til...",
