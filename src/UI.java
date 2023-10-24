@@ -10,7 +10,7 @@ public class UI {
                             "name is already in use by player 2 one you stupid bitch write another name",
                             "name is already in use by player 1 one you stupid bitch write another name",
                             "both players now dont have an acc selected so player 1 start by selecting or creating an acc by writing a name",
-                            "game rules and controlls",
+                            " How to roll, to roll the dice you have to type roll in the console. The game requires 2 dice in order to play. The two players alternate turns to roll unless they roll a 10, then they get an extra roll. The sum of each roll has a value which determines how much gold is added or subtracted to your balance. List of rollvalues(2. Tower +250, 3. Crater -100, 4. Palace gates +100, 5. Cold Desert -20, 6. Walled city +180, 7. Monastery 0, 8. Black cave -70, 9. Huts in the mountain +60, 10. The Werewall (werewolf-wall) -80,  11. The pit -50, 12. Goldmine +650)  ",
                             " you have rolled a 2, You've discovered a majestic Tower! 250 gold coins magically appear in your pockets, giving you a grand total of...) ",
                             " you have rolled a 3, Oh no! You stumbled into a Crater! 100 gold coins vanish into thin air, leaving you with a total of...",
                             " you have rolled a 4, You've arrived at the regal Palace Gates! 100 gold coins graciously bestowed upon you, boosting your total to...",
