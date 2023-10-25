@@ -45,8 +45,27 @@ public class GameRunner {
                 }
             }
 
+            gameLoop:
             if(start){
                 //if both player have selected an acc and they have written start this code will run
+
+                if(firstGameRun){
+
+                    if(player1.addPoints(1000)&&player2.addPoints(1000)){
+                        ui.print(26);
+                        firstGameRun = false;
+                    }else{
+                        ui.print(21);
+                        ui.print(7);
+                        player1.resetAcc();
+                        player2.resetAcc();
+                        p1ready = false;
+                        p2ready = false;
+                        start = false;
+                        break gameLoop;
+                    }
+                    
+                }
 
                 if(!winAmountSet&&!firstGameRun&&scanner.hasNextInt()){
                     int winCon = scanner.nextInt();
@@ -91,31 +110,17 @@ public class GameRunner {
                     ui.showResults(player1, player2);
                     start = false;
                     winAmountSet = false;
+                    firstGameRun = true;
 
                 }else if(player2.hasWon()&&winAmountSet){
                     endGame(player1, player2);
                     ui.showResults(player2, player1);
                     start = false;
                     winAmountSet = false;
+                    firstGameRun = true;
                     
                 }
 
-                if(firstGameRun){
-
-                    if(player1.addPoints(1000)&&player2.addPoints(1000)){
-                        ui.print(26);
-                        firstGameRun = false;
-                    }else{
-                        ui.print(20);
-                        ui.print(7);
-                        player1.resetAcc();
-                        player2.resetAcc();
-                        p1ready = false;
-                        p2ready = false;
-                        start = false;
-                    }
-                    
-                }
 
             }else if(!firstRun){
                 //if not both players have selected an acc yet this code wil run
