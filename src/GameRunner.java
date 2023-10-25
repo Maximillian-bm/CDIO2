@@ -90,15 +90,13 @@ public class GameRunner {
                 }
 
                 if(player1.hasWon()){
-                    //TO DOO add text in ui
-                    System.out.println("player 1 won");
                     endGame(player1, player2);
+                    ui.showResults(player1, player2);
                     start = false;
 
                 }else if(player2.hasWon()){
-                    //TO DOO add text in ui
-                    System.out.println("player 2 won");
                     endGame(player1, player2);
+                    ui.showResults(player2, player1);
                     start = false;
                     
                 }

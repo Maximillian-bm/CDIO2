@@ -23,7 +23,9 @@ public class UI {
                             " you have rolled an 11, You narrowly avoid the Pit, but 50 gold coins fall out of your pocket into the abyss, leaving you with... ",
                             " you have rolled a 12, You struck gold at the Goldmine! +650 gold coins, and your total now stands at...",
                             " Congratulations, you've emerged as the ultimate gold hunter, amassing a treasure trove of 3,000 gold coins! You stand triumphant, your fortune glittering like a dragon's hoard, and the title of champion is yours to claim!",
-                            " You dont have enough money to play"};
+                            " You dont have enough money to play",
+                            " you have won!!! you now have an account ballance of ",
+                            " you fucking looser youve lost and have now an account balance of "};
     private final String[] danishText = {"Dette er et 2-spiller spil, I skal hver især oprette en konto ved at skrive det navn, du ønsker din konto skal have, eller skrive et af følgende navne for at vælge en eksisterende konto.",
                             "Der er ingen konti gemt i databasen.",
                             "Du bruger din konto til at gemme, hvor mange guldmønter du har. Du vinder guld ved at spille spillet, og det koster 1000 guld at spille det, men fortvivl ikke, for alle nye konti starter med 1000 guld. Du kan også skifte konto ved at skrive 'skift'. Skriv 'stop' for at stoppe spillet. Når begge spillere har valgt en konto, kan I skrive 'start' for at begynde spillet. Spiller et, det er din tur. Skriv et navn.",
@@ -45,7 +47,9 @@ public class UI {
                             " Du har slået en 11. Du undgik heldigvis hullet, men 50 guld mønter faldt ned i afgrunden og efterlod dig med...",
                             " Du har slået en 12. Du har ramt guldåren i guldminen! +650 guld mønter er regnet ned over dig, og din samlede sum står nu på...",
                             " Du er nået enden af din rejse, og med en imponerende mængde af 3.000 guld mønter i lommen, er du den uovertrufne guldjæger. Guld strømmer mod dig, og du bader i din nyfundne rigdom.",
-                            " Du har ikke nogle penge til at spille"};
+                            " Du har ikke nogle penge til at spille",
+                            " du har vundet!!! du har nu en konto balance på ",
+                            " din fucking taber du har tabt og har nu en konto balance på "};
     private final String tiles = "-------------------------------------------------------------\n|  0 |+250|-100|+100| -20|+180|  0 | -70| +60|-80?| -50|+650|\n-------------------------------------------------------------";
 
     private String[] input;
@@ -175,6 +179,16 @@ public class UI {
 
         System.out.println();
         System.out.println(name+text[sum+7]+status[2]);
+
+    }
+
+    public void showResults(Player w, Player l){
+
+        String[] wInfo = Account.getAccInfo(w.getAcc());
+        String[] lInfo = Account.getAccInfo(l.getAcc());
+
+        System.out.println(wInfo[0]+text[22]+wInfo[1]);
+        System.out.println(lInfo[0]+text[23]+lInfo[1]);
 
     }
     
