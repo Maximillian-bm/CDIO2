@@ -3,7 +3,8 @@ public class Player {
     private Die dice1 = new Die(6);
     private Die dice2 = new Die(6);
 
-    private int points; 
+    private int points;
+    private int winCon;
 
     private Account acc;
 
@@ -77,10 +78,14 @@ public class Player {
 
     public boolean hasWon(){
         
-        if(3000 <= points){
+        if(winCon <= points){
             return true;
         }else{
             return false;
         }
+    }
+
+    public void setWinCon(int winCon){
+        this.winCon = winCon;
     }
 }

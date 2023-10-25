@@ -4,7 +4,7 @@ public class UI {
     private String[] text;
     private final String[] englishText = {"This is a 2 player game, you will each have to create an account by writing the name you want your account to have or write one of the following names to sellect an existing account",
                             "There are no accounts saved in the database",
-                            "You use you account to save how many gold pieces you have, you win gold by playing the game and it cost 1000 gold to play it but dont worry becous all new accounts start with 1000 gold. You can also switch account by writing 'switch'. You can write 'exit' to exit the program. When both players have selected an account you can write 'start' to start the game. Player one you are up first, write a name",
+                            "You use you account to save how many gold pieces you have, you win gold by playing the game and it cost 1000 gold to play it but dont worry becous all new accounts start with 1000 gold. You can also switch account by writing 'switch'. You can write 'exit' to exit the program just know that progress can be lost if you exit mid game. When both players have selected an account you can write 'start' to start the game. Player one you are up first, write a name",
                             "player 1 has selected acc now its player 2's turn",
                             "player 2 has selected acc you can now start the game by writig 'start'",
                             "name is already in use by player 2 one you stupid bitch write another name",
@@ -26,10 +26,12 @@ public class UI {
                             " You dont have enough money to play",
                             " you have won!!! you now have an account ballance of ",
                             " you fucking looser youve lost and have now an account balance of ",
-                            "This gama is now done you can write 'start' to start a new game or write 'switch' to use other accounts"};
+                            "This gama is now done you can write 'start' to start a new game or write 'switch' to use other accounts",
+                            "Number not in range try again",
+                            "How many points you wanna play to? write a number bettween 1000 and 5000"};
     private final String[] danishText = {"Dette er et 2-spiller spil, I skal hver især oprette en konto ved at skrive det navn, du ønsker din konto skal have, eller skrive et af følgende navne for at vælge en eksisterende konto.",
                             "Der er ingen konti gemt i databasen.",
-                            "Du bruger din konto til at gemme, hvor mange guldmønter du har. Du vinder guld ved at spille spillet, og det koster 1000 guld at spille det, men fortvivl ikke, for alle nye konti starter med 1000 guld. Du kan også skifte konto ved at skrive 'skift'. Skriv 'stop' for at stoppe spillet. Når begge spillere har valgt en konto, kan I skrive 'start' for at begynde spillet. Spiller et, det er din tur. Skriv et navn.",
+                            "Du bruger din konto til at gemme, hvor mange guldmønter du har. Du vinder guld ved at spille spillet, og det koster 1000 guld at spille det, men fortvivl ikke, for alle nye konti starter med 1000 guld. Du kan også skifte konto ved at skrive 'skift'. Skriv 'stop' for at stoppe spillet bare husk at data kan blive slettet hvis man stopper midt i et spil. Når begge spillere har valgt en konto, kan I skrive 'start' for at begynde spillet. Spiller et, det er din tur. Skriv et navn.",
                             "Spiller 1 har valgt en konto, nu er det spiller 2's tur.",
                             "Spiller 2 har valgt en konto. nu kan spillet startes ved at skrive 'start'",
                             "Navnet er allerede i brug af spiller 2. Skriv et andet navn, din tåbelige person.",
@@ -51,7 +53,9 @@ public class UI {
                             " Du har ikke nogle penge til at spille",
                             " du har vundet!!! du har nu en konto balance på ",
                             " din fucking taber du har tabt og har nu en konto balance på ",
-                            "Spillet er nu slut, du kan skrive 'start' for at starte et nyt spil eller skrive 'skift' for at bruger andre kontoer"};
+                            "Spillet er nu slut, du kan skrive 'start' for at starte et nyt spil eller skrive 'skift' for at bruger andre kontoer",
+                            "Ikke et validt nummer prøv igen",
+                            "Hvor meget points vil i spille til? skriv et tal mellem 1000 og 5000"};
     private final String tiles = "-------------------------------------------------------------\n|  0 |+250|-100|+100| -20|+180|  0 | -70| +60|-80?| -50|+650|\n-------------------------------------------------------------";
 
     private String[] input;

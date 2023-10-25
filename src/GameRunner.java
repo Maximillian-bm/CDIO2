@@ -12,6 +12,7 @@ public class GameRunner {
         boolean firstRun = true;
         boolean firstGameRun = true;
         boolean p1sTurn = true;
+        boolean winAmountSet = false;
         UI ui = new UI(0);
 
         //Importing scanner
@@ -47,10 +48,62 @@ public class GameRunner {
             if(start){
                 //if both player have selected an acc and they have written start this code will run
 
+                if(!winAmountSet&&!firstGameRun&&scanner.hasNextInt()){
+                    int winCon = scanner.nextInt();
+                    if(winCon <= 5000 && winCon > 1000){
+                        player1.setWinCon(winCon);
+                        player2.setWinCon(winCon);
+                        winAmountSet = true;
+                        ui.print(8);
+                    }else{
+                        ui.print(25);
+                    }
+                }else{
+
+                    if(ui.is(input, 1)){
+
+                        if(p1sTurn){
+
+                            int[] roll = player1.rollDice();
+
+                            ui.printRoll(player1.getName(), roll);
+
+                            if(roll[0] + roll[1] != 10){
+                                p1sTurn = false;
+                            }
+
+                        }else{
+
+                            int[] roll = player2.rollDice();
+
+                            ui.printRoll(player2.getName(), roll);
+
+                            if(roll[0] + roll[1] != 10){
+                                p1sTurn = true;
+                            }
+
+                        }
+                    }
+                }
+
+                if(player1.hasWon()&&winAmountSet){
+                    endGame(player1, player2);
+                    ui.showResults(player1, player2);
+                    start = false;
+                    winAmountSet = false;
+
+                }else if(player2.hasWon()&&winAmountSet){
+                    endGame(player1, player2);
+                    ui.showResults(player2, player1);
+                    start = false;
+                    winAmountSet = false;
+                    
+                }
+
                 if(firstGameRun){
 
                     if(player1.addPoints(1000)&&player2.addPoints(1000)){
-                        ui.print(8);
+                        ui.print(26);
                         firstGameRun = false;
                     }else{
                         ui.print(20);
@@ -61,43 +114,6 @@ public class GameRunner {
                         p2ready = false;
                         start = false;
                     }
-                    
-                }
-
-                if(ui.is(input, 1)){
-
-                    if(p1sTurn){
-
-                        int[] roll = player1.rollDice();
-
-                        ui.printRoll(player1.getName(), roll);
-
-                        if(roll[0] + roll[1] != 10){
-                            p1sTurn = false;
-                        }
-
-                    }else{
-
-                        int[] roll = player2.rollDice();
-
-                        ui.printRoll(player2.getName(), roll);
-
-                        if(roll[0] + roll[1] != 10){
-                            p1sTurn = true;
-                        }
-
-                    }
-                }
-
-                if(player1.hasWon()){
-                    endGame(player1, player2);
-                    ui.showResults(player1, player2);
-                    start = false;
-
-                }else if(player2.hasWon()){
-                    endGame(player1, player2);
-                    ui.showResults(player2, player1);
-                    start = false;
                     
                 }
 
