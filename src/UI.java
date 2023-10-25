@@ -6,11 +6,11 @@ public class UI {
                             "There are no accounts saved in the database",
                             "You use you account to save how many gold pieces you have, you win gold by playing the game and it cost 1000 gold to play it but dont worry becous all new accounts start with 1000 gold. You can also switch account by writing 'switch'. You can write 'exit' to exit the program. When both players have selected an account you can write 'start' to start the game. Player one you are up first, write a name",
                             "player 1 has selected acc now its player 2's turn",
-                            "player 2 has selected acc",
+                            "player 2 has selected acc you can now start the game by writig 'start'",
                             "name is already in use by player 2 one you stupid bitch write another name",
                             "name is already in use by player 1 one you stupid bitch write another name",
                             "both players now dont have an acc selected so player 1 start by selecting or creating an acc by writing a name",
-                            " How to roll, to roll the dice you have to type roll in the console. The game requires 2 dice in order to play. The two players alternate turns to roll unless they roll a 10, then they get an extra roll. The sum of each roll has a value which determines how much gold is added or subtracted to your balance. List of rollvalues(2. Tower +250, 3. Crater -100, 4. Palace gates +100, 5. Cold Desert -20, 6. Walled city +180, 7. Monastery 0, 8. Black cave -70, 9. Huts in the mountain +60, 10. The Werewall (werewolf-wall) -80,  11. The pit -50, 12. Goldmine +650)  ",
+                            " How to roll, to roll the dice you have to type 'roll' in the console. The game requires 2 dice in order to play. The two players alternate turns to roll unless they roll a 10, then they get an extra roll. The sum of each roll has a value which determines how much gold is added or subtracted to your balance. List of rollvalues(2. Tower +250, 3. Crater -100, 4. Palace gates +100, 5. Cold Desert -20, 6. Walled city +180, 7. Monastery 0, 8. Black cave -70, 9. Huts in the mountain +60, 10. The Werewall (werewolf-wall) -80,  11. The pit -50, 12. Goldmine +650)  ",
                             " you have rolled a 2, You've discovered a majestic Tower! 250 gold coins magically appear in your pockets, giving you a grand total of...) ",
                             " you have rolled a 3, Oh no! You stumbled into a Crater! 100 gold coins vanish into thin air, leaving you with a total of...",
                             " you have rolled a 4, You've arrived at the regal Palace Gates! 100 gold coins graciously bestowed upon you, boosting your total to...",
@@ -25,15 +25,16 @@ public class UI {
                             " Congratulations, you've emerged as the ultimate gold hunter, amassing a treasure trove of 3,000 gold coins! You stand triumphant, your fortune glittering like a dragon's hoard, and the title of champion is yours to claim!",
                             " You dont have enough money to play",
                             " you have won!!! you now have an account ballance of ",
-                            " you fucking looser youve lost and have now an account balance of "};
+                            " you fucking looser youve lost and have now an account balance of ",
+                            "This gama is now done you can write 'start' to start a new game or write 'switch' to use other accounts"};
     private final String[] danishText = {"Dette er et 2-spiller spil, I skal hver især oprette en konto ved at skrive det navn, du ønsker din konto skal have, eller skrive et af følgende navne for at vælge en eksisterende konto.",
                             "Der er ingen konti gemt i databasen.",
                             "Du bruger din konto til at gemme, hvor mange guldmønter du har. Du vinder guld ved at spille spillet, og det koster 1000 guld at spille det, men fortvivl ikke, for alle nye konti starter med 1000 guld. Du kan også skifte konto ved at skrive 'skift'. Skriv 'stop' for at stoppe spillet. Når begge spillere har valgt en konto, kan I skrive 'start' for at begynde spillet. Spiller et, det er din tur. Skriv et navn.",
                             "Spiller 1 har valgt en konto, nu er det spiller 2's tur.",
-                            "Spiller 2 har valgt en konto.",
+                            "Spiller 2 har valgt en konto. nu kan spillet startes ved at skrive 'start'",
                             "Navnet er allerede i brug af spiller 2. Skriv et andet navn, din tåbelige person.",
                             "Navnet er allerede i brug af spiller 1. Skriv et andet navn, din tåbelige person.",
-                            "Begge spillere har nu ikke valgt en konto, så spiller 1 begynder ved at vælge eller oprette en konto ved at skrive et navn.",
+                            "Begge spillere har nu ikke en konto, så spiller 1 begynder ved at vælge eller oprette en konto ved at skrive et navn.",
                             "Sådan ruller du terningerne: Du skal skrive 'kast' i konsollen for at rulle terningerne. Spillet kræver 2 terninger for at spille. De to spillere skiftes til at rulle, medmindre de ruller en 10, hvorefter de får et ekstra rulle. Summen af hver rulle har en værdi, hvlike afgør, hvor meget guld der tilføjes eller trækkes fra din saldo. Liste over terningværdier (2. Tårn +250, 3. Krater -100, 4. Palas port +100, 5. Kold ørken -20, 6. Muret by +180, 7. Kloster 0, 8. Sorte hule -70, 9. Hytter i bjergene +60, 10. Varulvevæg -80, 11. Hullet -50, 12. Guldmine +650)..",
                             " Du har slået en 2, Du har opdaget et majestætisk tårn! 250 guld mønter dukker magisk op i dine lommer og giver dig en samlet sum af...",
                             " Du har slået en 3, Åh nej! Du er faldet ned i en krater! 100 guld mønter forsvinder som dug for solen og efterlader dig med en samlet sum af...",
@@ -43,13 +44,14 @@ public class UI {
                             " Du har slået en 7. Du er nået det fredelige kloster. Du finder indre ro, men dit guld forbliver i en zen-lignende tilstand af...",
                             " Du har slået en 8. Du stirrer ned i dybet af den sorte hule! 70 guld mønter er blevet slugt af mørket, og din samlede sum er nu...",
                             " Du har slået en 9. Du er stødt på hyggelige hytter i bjergene! I en af hytterne opdager du 60 guld mønter, hvilket bringer din samlede sum til...",
-                            " Du har slået en 10. Åh nej, du har ramt warulve-muren, og den hyler i gennem hele natten! Du mister 80 guld mønter, men du får en ekstra tur, så din nye samlede sum er...",
+                            " Du har slået en 10. Åh nej, du har ramt warulve-muren, og den hyler i gennem hele natten! Du mister 80 guld mønter, men du får en ekstra tur, så din nye sum er...",
                             " Du har slået en 11. Du undgik heldigvis hullet, men 50 guld mønter faldt ned i afgrunden og efterlod dig med...",
                             " Du har slået en 12. Du har ramt guldåren i guldminen! +650 guld mønter er regnet ned over dig, og din samlede sum står nu på...",
                             " Du er nået enden af din rejse, og med en imponerende mængde af 3.000 guld mønter i lommen, er du den uovertrufne guldjæger. Guld strømmer mod dig, og du bader i din nyfundne rigdom.",
                             " Du har ikke nogle penge til at spille",
                             " du har vundet!!! du har nu en konto balance på ",
-                            " din fucking taber du har tabt og har nu en konto balance på "};
+                            " din fucking taber du har tabt og har nu en konto balance på ",
+                            "Spillet er nu slut, du kan skrive 'start' for at starte et nyt spil eller skrive 'skift' for at bruger andre kontoer"};
     private final String tiles = "-------------------------------------------------------------\n|  0 |+250|-100|+100| -20|+180|  0 | -70| +60|-80?| -50|+650|\n-------------------------------------------------------------";
 
     private String[] input;
@@ -189,6 +191,8 @@ public class UI {
 
         System.out.println(wInfo[0]+text[22]+wInfo[1]);
         System.out.println(lInfo[0]+text[23]+lInfo[1]);
+
+        System.out.println(text[24]);
 
     }
     
