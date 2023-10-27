@@ -120,7 +120,7 @@ public class UI {
         }
     }
 
-    public void printDiceRoll(int[] diceRolls) {
+    public void printDiceRoll(int[] diceRolls, long time) {
         String output = "";
         String next = "\n";
         String space = "        ";
@@ -130,6 +130,7 @@ public class UI {
         }
 
         System.out.println(output);
+        System.out.println(System.nanoTime()-time);
         System.out.println(tiles);
 
         int sum = diceRolls[0]+diceRolls[1];
@@ -177,9 +178,9 @@ public class UI {
         return this.input[i].equals(input);
     }
 
-    public void printRoll(String name, int[] status){
+    public void printRoll(String name, int[] status, long time){
 
-        printDiceRoll(status);
+        printDiceRoll(status, time);
 
         int sum = status[0] + status[1];
 

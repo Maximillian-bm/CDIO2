@@ -15,6 +15,8 @@ public class GameRunner {
         boolean winAmountSet = false;
         UI ui = new UI(0);
 
+        long time;
+
         //Importing scanner
         var scanner = new java.util.Scanner(System.in);
         scanner.useLocale(java.util.Locale.ENGLISH);
@@ -24,6 +26,8 @@ public class GameRunner {
 
         program:
         while(scanner.hasNextLine()) {
+
+            time = System.nanoTime();
 
             input = scanner.nextLine();
             
@@ -85,7 +89,7 @@ public class GameRunner {
 
                             int[] roll = player1.rollDice();
 
-                            ui.printRoll(player1.getName(), roll);
+                            ui.printRoll(player1.getName(), roll, time);
 
                             if(roll[0] + roll[1] != 10){
                                 p1sTurn = false;
@@ -95,7 +99,7 @@ public class GameRunner {
 
                             int[] roll = player2.rollDice();
 
-                            ui.printRoll(player2.getName(), roll);
+                            ui.printRoll(player2.getName(), roll, time);
 
                             if(roll[0] + roll[1] != 10){
                                 p1sTurn = true;
